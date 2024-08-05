@@ -4,12 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CINTLAMI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- NormalizeCCS -->
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
     <body> 
+        <div id="loading-screen">
+            <div class="spinner"></div>
+        </div>
+        <input type="checkbox" id="close-notice-checkbox" class="close-checkbox">
+        <div class="ts-store-notice">
+            <div class="container-notice">
+                <h1>LAMY Cintas y Cartuchos</h1>
+                <p>Envíos Gratis desde $150.000 <img draggable="false" role="img" class="emoji" alt="🇨🇴" src="./images/images/bandera.svg">&nbsp;</p>
+                <label for="close-notice-checkbox" class="close-label">&times;</label>
+            </div>
+        </div>
         <header class="header">
-        
+            <div class="container logo-navbar">
+                <div>
+                    <a href="index.html"><img class="logo" src="./images/images/logo.png" alt="imagen-logo" /></a>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul class="main-menu" >
+                        <li class="menu-item" >
+                            <strong><a class="header-item" href="#" >Servicios</a></strong>
+                        </li>
+                        <li class="menu-item">
+                            <strong><a class="header-item" href="#" >Computadores</a></strong>
+                        </li>
+                        <li class="menu-item">
+                            <strong><a class="header-item" href="#" >Impresoras</a></strong>
+                        </li>
+                        <li class="menu-item">
+                            <strong><a class="header-item" href="#" >Tintas</a></strong>
+                        </li>
+                        <li class="menu-item">
+                            <strong><a class="header-item" href="#" >Toners</a></strong>
+                        </li>
+                        <li class="menu-item">
+                            <strong><a class="header-item" href="#" >Accesorios</a></strong>
+                        </li>
+                    </ul>
+                    <div class="container-search">
+                        <input class="search" type="text" id="search-input" placeholder="Buscar productos">
+                        <div class="btn-search" id="search-button">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="btn-cart">
+                        <button type="button" class="btn btn-success" title="Ver su cesta de la compra">
+                            <a class="cart-icon" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                            </svg>
+                            </a>
+                            <p class="cart-number">0</p>
+                        </button>   
+                    </div>
+                    <div class="login">
+                        <label for="login-toggle" class="btn-login">Iniciar sesión</label>
+                        <input type="checkbox" id="login-toggle" class="login-toggle">
+                        <strong><a class="btn-register" href="#">Registrarse</a></strong>
+                        <div class="container-log">
+                            <div class="log-content">
+                                <label for="login-toggle" class="btn-close">X</label>
+                                <form id="login-form" action="#">
+                                    <label for="username"><strong>Correo electrónico:</strong></label>
+                                    <input class="text-log" type="text" id="username" name="username" >
+                                    <div id="username-warning" class="warning-message">Este campo es obligatorio</div>
+                                    <div id="email-format-warning" class="warning-message">Formato de correo electrónico no válido</div>
+                                    <label for="password"><strong>Contraseña:</strong></label>
+                                    <div class="password-wrapper">
+                                        <input class="text-log" type="password" id="password" name="password" >
+                                        <span class="toggle-password" onclick="togglePassword()">
+                                            <i class="fa fa-eye" id="eye-icon"></i>
+                                        </span>
+                                    </div>
+                                    <div id="password-warning" class="warning-message">Este campo es obligatorio</div>
+                                    <button class="btn-log" type="submit">Entrar</button>
+                                    <a class="log-forget" href="#">¿Olvidaste tu contraseña?</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>                 
+                </nav>
+            </div>
         </header>
         <main class="main">
             
