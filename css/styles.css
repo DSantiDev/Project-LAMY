@@ -128,6 +128,7 @@ header {
     align-items: center;
     justify-content: space-between;
     margin: 0;
+    width: 100%;
 }
 nav.nav {
     display: flex;
@@ -208,7 +209,7 @@ li.menu-item {
 	transition: all .7s ease;
 }
 .container-search:hover input {
-	width: 25rem;
+	width: 23rem;
 }
 .container-search:hover i{
 	transform: rotate(-360deg);
@@ -233,6 +234,11 @@ li.menu-item {
 .btn:hover{
 	background: #CD1023;
     transition: 1s;   
+}
+    /** Contenedor carrito y iniciar*/
+.container-cartlog {
+    display: flex;
+    align-items: center;
 }
     /**Estilo carrito de compras*/
 .btn-cart {
