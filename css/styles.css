@@ -167,6 +167,13 @@ li.menu-item {
     color: black;
     padding: 1rem;
 }
+    /**Boton hamburguesa*/
+.btn-hamburguer{
+    display: none;
+}
+.btnh-toggle{
+    display: none;
+}
     /**Estilo barra de busqueda*/
 .container-search {
 	transform: translate(5%,0%);
@@ -490,4 +497,38 @@ footer {
 }
 .btn-wsp:hover .text-whats {
     display: block;
+}
+@media (max-width: 768px) {
+    nav.nav {
+        display: none;
+    }
+    .login{
+        display: none;
+    }
+    .btn-hamburguer{
+        display: block;
+        background: none;
+        color: white;
+        border: none;
+        padding-left: 1.5rem;
+    }
+    nav.visible{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1.6rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        font-size: 2.5rem;
+        padding: 4.8rem;
+        box-shadow: 0 0 0 300vmax #00000080;
+    }
+    .btnh-toggle{
+        display: none;
+    }
 }
