@@ -1,9 +1,3 @@
-:root {
-    /** Colors */
-    
-    /** Fonts*/
-    --overall-font-size: 62.5%;
-}
 * {
     padding: 0;
     margin: 0;
@@ -15,7 +9,7 @@ body {
 }
 html
     {
-    font-size: var( --overall-font-size); /* 1rem = 10px */
+        font-size: 62.5%; /* 1rem = 10px */
 }
 p {
     line-height: 1.4;
@@ -81,7 +75,7 @@ p {
     font-size: 1.25rem;
     padding-left: 1rem; 
 }
-.close-label {
+.close-labe-notice {
     cursor: pointer;
     font-size: 2rem; 
     line-height: 1;
@@ -100,7 +94,7 @@ p {
     display: none;
 }
 
-img.wp-smiley, img.emoji {
+.flag {
     display: inline;
     border: none;
     box-shadow: none;
@@ -110,6 +104,13 @@ img.wp-smiley, img.emoji {
     vertical-align: -0.1em;
     background: none;
     padding: 0;
+}
+.container-notice svg.bi.bi-x-lg {
+    margin-left: 1rem;
+}
+.container-notice svg.bi.bi-x-lg:hover{
+    color: #CD1023;
+    transition: 1s;
 }
 
 /**header*/
@@ -136,9 +137,22 @@ nav.nav {
     width: 100%;
     padding-left: 2rem;
 }
+    /**Logo*/
 img.logo {
     width: 15.6rem;
     border-radius: .5rem;
+}
+.container-logo {
+    padding-right: 0;
+}
+    /** Contenedor carrito y iniciar*/
+ .container-cartlog {
+    display: flex;
+    align-items: center;
+}
+.container-nav-cartlog {
+    display: flex;
+    flex-basis: 87%;
 }
 .main-menu {
     list-style-type: none;
@@ -178,7 +192,6 @@ li.menu-item {
 .container-search {
 	transform: translate(5%,0%);
 	padding: 1rem;
-    margin-left: 1rem;
 }
 .search {
 	outline: none;
@@ -193,7 +206,7 @@ li.menu-item {
 	transition: all .7s ease;
 }
 ::placeholder {
-    font-size: 2rem;
+    font-size: 1.75rem;
 	color: grey;
 }
 .btn-search {
@@ -242,12 +255,11 @@ li.menu-item {
 	background: #CD1023;
     transition: 1s;   
 }
-    /** Contenedor carrito y iniciar*/
-.container-cartlog {
-    display: flex;
-    align-items: center;
-}
+   
     /**Estilo carrito de compras*/
+.btn-cart1{
+    display: none;
+}
 .btn-cart {
     margin-left: 2rem;
     cursor: pointer;
@@ -320,6 +332,7 @@ li.menu-item {
     line-height: 1.4rem;
 }
     /** Cuadro de incio sesion*/
+    
 .login-toggle {
     display: none;
 }
@@ -329,7 +342,7 @@ li.menu-item {
     position: fixed;
     width: 40rem; 
     z-index: 2000;
-
+    right: .1rem;   
 }
 
 .log-content {
@@ -368,24 +381,28 @@ form {
     background: #29166F;
     transition: 1s;
 }
+
+label.btnh-close {
+    display: none;
+}
 .btn-close {
     position: absolute;
     top: 1rem;
     right: 1rem;
     background: #CD1023;
     border: none;
-    color: white;
+    color: black;
     border-radius: 50%;
     padding: 0.5rem;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 2rem;
     transition: 1s;
-    width: 2rem;
     display: flex;
     justify-content: center;
 }
 .btn-close:hover{
     background: #29166F;
+    color: white;
 }
 .login-toggle:checked ~ .container-log {
     display: block;
@@ -499,12 +516,64 @@ footer {
     display: block;
 }
 @media (max-width: 768px) {
-    nav.nav {
+    /**Containers*/
+    .container-nav-cartlog{
         display: none;
     }
-    .login{
+    .logo-navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        width: 100%;
+    }
+    .container-logo {
+        flex-basis: 86%;
+    }
+    .container-nav-cartlog nav {
+        flex-direction: column;
+        padding-top: 4rem; 
+    }
+    .container-search {
+        margin-right: 3rem;
+    }
+    .container-cartlog {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; 
+        gap: 1rem;
+        margin-right: 4.8rem;
+        padding: 0.5rem 1rem;
+    }
+    .container-log {
+        top: 31rem;
+    }   
+    /**Boton cart*/
+    .cart-btn {
+        display: flex;
+    }
+    .btn-cart{
         display: none;
     }
+    .btn-cart1{
+        display: block;
+    }   
+     /**Funcion Boton Hamburguesa*/
+     .btnh-toggle:checked ~ .container-nav-cartlog {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000000cc; 
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        z-index: 1000;
+        overflow-y: auto;
+    }  
+    /**Boton Hamburguesa*/
     .btn-hamburguer{
         display: block;
         background: none;
@@ -512,23 +581,64 @@ footer {
         border: none;
         padding-left: 1.5rem;
     }
-    nav.visible{
-        opacity: 0;
-        visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: 1.6rem;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background-color: black;
-        font-size: 2.5rem;
-        padding: 4.8rem;
-        box-shadow: 0 0 0 300vmax #00000080;
+    .btn-hamburguer .bi-list:hover {
+        color: #CD1023;
     }
     .btnh-toggle{
         display: none;
     }
+    .btnh-close {
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        background: #CD1023;
+        border: none;
+        color: black;
+        border-radius: 50%;
+        padding: .7rem;
+        cursor: pointer;
+        font-size: 1.3rem;
+        transition: 1s;
+   
+    }   
+    .btnh-close:hover{
+        color: white;
+        background-color: #29166F;
+        transition: 1s;
+    }
+    label.btnh-close {
+        display: block;
+    }
+    
+    /**Lista principal*/
+    nav.nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; 
+        width: 100%;
+        padding: 4rem 4rem 0 0;
+    }
+    ul.main-menu {
+        list-style-type: none;
+        padding: 1rem 1rem 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column; 
+        gap: 1rem;
+        width: auto; 
+    }
+    .main-menu li {
+        background: white;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        text-align: right; 
+    }
+    .header-item {
+        display: flex;
+        justify-content: center;
+    }
+    .header-item:hover {
+        color: white;
+    }
+    
 }
