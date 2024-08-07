@@ -1,5 +1,4 @@
-/**Load screen */
-
+/**Pantalla de carga */
 document.addEventListener('DOMContentLoaded', function() {
     const loadingScreen = document.getElementById('loading-screen');
     if (loadingScreen) {
