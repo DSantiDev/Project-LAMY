@@ -3,7 +3,7 @@
         position: relative;
         max-width: 100%; 
         overflow: hidden;
-        z-index: 1000;
+        z-index: 900;
     }
     
     .carousel-wrapper {
@@ -15,6 +15,7 @@
         min-width: 100%;
         box-sizing: border-box;
         height: 30rem; 
+        
     }
     
     .carousel img {
@@ -36,7 +37,7 @@
     
     .carousel-prev {
         left: 0;
-        border-right: 2rem solid black;
+        border-right: 2rem solid white;
     }
     .carousel-prev:hover{
         left: 0;
@@ -45,7 +46,7 @@
     }
     .carousel-next {
         right: 0;
-        border-left: 2rem solid black ;
+        border-left: 2rem solid white ;
     }
     .carousel-next:hover{
         right: 0;

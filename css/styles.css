@@ -29,11 +29,11 @@ p {
     z-index: 9999; 
 }
 .spinner {
-    border: 8px solid #f3f3f3; 
-    border-top: 8px solid #29166F; 
+    border: .8rem solid #f3f3f3; 
+    border-top: .8rem solid #29166F; 
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 5rem;
     animation: spin 3s linear infinite;
 }
 
@@ -45,24 +45,23 @@ p {
 
 /** Notice */
 .container-notice h1{
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 .ts-store-notice {
     width: 100%;
-    background-color: black;
+    background: linear-gradient(#CD1023, black);
     color: white;
     border: black;
-    border-width: 0 0 1px 0;
+    border-width: 0 0 .1rem 0;
     border-style: solid;
-    line-height: 20px;
+    line-height: 3rem;
     z-index: 1000;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    text-align: center; /
+    text-align: center;
 }
-
 .ts-store-notice .container-notice {
     display: flex;
     justify-content: center; 
@@ -79,7 +78,7 @@ p {
     cursor: pointer;
     font-size: 2rem; 
     line-height: 1;
-    padding: 0 10px;
+    padding: 0 1rem;
     color: white;
     background: none;
     border: none;
@@ -160,19 +159,19 @@ img.logo {
     gap: 1rem;
     font-size: 1.4rem;
     margin: 0; 
-    padding: 0
+    padding: 0;
+    flex-wrap: wrap;
 }
 .menu-item:hover{
-    background: #CD1023;
-    transition: 1s; 
-    
+    background:linear-gradient(#CD1023, #ca4250d5);
+    transform: background 1;  
 }
 .header-item:hover{
     color: white;
     transition: 1s;
 }
 li.menu-item {
-    background: white;
+    background: linear-gradient(#a3a3a3,white );
     border-radius: 1rem;
     padding: .5rem;
 }
@@ -215,7 +214,7 @@ li.menu-item {
 	top: 0;
 	width: 6rem;
 	height: 6rem;
-	background: #D50000;
+	background:#CD1023;
 	line-height: 6rem;
 	border-radius: 50%;
 	text-align: center;
@@ -229,7 +228,7 @@ li.menu-item {
 	transition: all .7s ease;
 }
 .container-search:hover input {
-	width: 23rem;
+	width: 21.9rem;
 }
 .container-search:hover i{
 	transform: rotate(-360deg);
@@ -252,7 +251,7 @@ li.menu-item {
     height: 2.4rem; 
 }
 .btn:hover{
-	background: #CD1023;
+	background:linear-gradient(#CD1023, #ca4250d5);
     transition: 1s;   
 }
    
@@ -277,8 +276,8 @@ li.menu-item {
 }
 .cart-number    {
     position: absolute;
-    top: -10px; 
-    right: -10px; 
+    top: -1rem; 
+    right: -1rem; 
     background-color: white;
     color: black; 
     border-radius: 50%;
@@ -299,7 +298,7 @@ li.menu-item {
     gap: .5rem;
 }
 .btn-login {
-    background: #CD1023;
+    background:linear-gradient(#CD1023, #ca4250d5);
     border-radius: 21rem;
     font-size: 1.4rem;
     text-decoration: none;
@@ -320,7 +319,7 @@ li.menu-item {
 
 .btn-register {
     display: inline-block;
-    background: #CD1023;
+    background:linear-gradient(#CD1023, #ca4250d5);
     border-radius: 21rem;
     font-size: 1.4rem;
     text-decoration: none;
@@ -369,7 +368,7 @@ form {
 }
 
 .btn-log {
-    background: red;
+    background:linear-gradient(#CD1023, #ca4250d5);
     color: white;
     padding: .5rem;
     border-radius: 1rem;
@@ -378,8 +377,8 @@ form {
     margin-bottom: 1rem; 
 }
 .btn-log:hover{
-    background: #29166F;
-    transition: 1s;
+    background: linear-gradient( #29166F, #31216b94);
+    transition: background 1s ease;
 }
 
 label.btnh-close {
@@ -389,7 +388,7 @@ label.btnh-close {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: #CD1023;
+    background:linear-gradient(#CD1023, #ca4250d5);
     border: none;
     color: black;
     border-radius: 50%;
@@ -401,8 +400,9 @@ label.btnh-close {
     justify-content: center;
 }
 .btn-close:hover{
-    background: #29166F;
+    background: linear-gradient( #29166F, #31216b94);
     color: white;
+    transition: background 1s ease;
 }
 .login-toggle:checked ~ .container-log {
     display: block;
@@ -413,6 +413,10 @@ label.btnh-close {
     text-align: center;
     display: block; 
     font-weight: 600;
+    transition: .5s;
+}
+.log-forget:hover{
+    color: #CD1023;
 }
 .password-wrapper {
     position: relative;
@@ -443,7 +447,202 @@ label.btnh-close {
     text-align: center;
 }
 /**main*/
+  /** Cards*/
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem; 
+        justify-content: center; 
+        padding: 1rem;
+    }
+    .btn-buy {
+        height: 5rem;
+        display: flex;
+        align-items: center;
+    }
+    .card {
+        border: .1rem solid #ddd;
+        border-radius: .8rem;
+        overflow: hidden;
+        box-shadow: 0 .4rem .8rem #0000001a;
+        max-width: 30rem;
+        background: #fff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-container::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: .5rem;
+        margin: 2rem auto;
+        background: #000000;
+        border-radius: 1rem;
+    }
+    .card:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 .6rem 1.2rem #ec0a0a33;
+    }
 
+    .card-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-body {
+        padding: 1rem;
+    
+    }
+
+    .card-title {
+        margin: 0;
+        font-size: 1.8rem;
+        color: #000000;
+        font-weight: 600;
+    }
+
+    .card-text {
+        font-size: 1.3rem;
+        color: #666;
+        margin: 0.5rem 0;
+        line-height: 1.4;
+    }
+    .card-img-container {
+        position: relative;
+    }
+    
+    .card-icons {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    
+    .card-icons i {
+        font-size: 1.5rem;
+        color: #fff;
+        background: #00000080;
+        padding: 0.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    .card-icons i{
+        opacity: 0;
+        transition: .3s ease;
+    }
+    .card-icons i:hover {
+        background: #CD1023;
+        color: black;
+        transition: 1s;
+        transform: scale(1.2);
+    }     
+    .card:hover .card-icons i{
+        opacity: 1;
+    }     
+    .card-button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        margin-left: 1rem;
+        font-size: 1rem;
+        color: #fff;
+        background:linear-gradient(#CD1023, #ca4250d5) ;
+        text-decoration: none;
+        border-radius: .4rem;
+        transition: 1s, transform 0.3s ease;
+    }
+    .card-button:hover {
+        background: linear-gradient( #29166F, #31216b94);
+        box-shadow: 0 .4rem .6rem #0000004d;
+        transform: translateY(-0.3rem) scale(1.2);
+        font-size: 1.2rem;
+    }
+    .prices {
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+        align-items: center;
+    }
+    .card-price{
+        font-size: 2rem;
+        font-weight: 600;
+        transition: 1s;
+    }
+    .card-descont{
+        font-size: 1.5rem;
+        color: #CD1023;
+        text-decoration: line-through;
+        transform: rotate(10deg);
+        font-weight: 500;
+        transition: 1s;
+    }
+    .card-img-container::after {
+        content: "¡Descuento!";
+        color: #fff;
+        background: #CD1023;
+        padding: 0.6rem 1rem;   
+        border-radius: 1rem;
+        font-size: 1.2rem;  
+        font-weight: 600;
+        position: absolute;
+        top: 1.5rem; 
+        left: 1.5rem; 
+        transform: rotate(-10deg);
+        opacity: 0; 
+        transition: opacity 0.3s ease;
+        text-transform: uppercase;
+        opacity: 1;
+    }
+    .card-body:hover .card-text {
+        color: #333;
+    }
+    
+/** Ofertas*/
+
+
+.texto-p {
+    text-align: center; 
+    margin: 2rem 0; 
+    padding: 1rem; 
+    background: #f8f9fa;
+    border-radius: 0.5rem; 
+}
+
+.texto-p h2 {
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    color: #000000; 
+    margin: 0; 
+}
+
+.texto-p h2::before  {
+    content: '';
+    display: block;
+    width: 50%; 
+    height: .5rem;
+    background: #000000; 
+    margin: .5rem auto; 
+    border-radius: 1rem; 
+    transition: transform 0.3s ease; 
+}
+.texto-p h2::after  {
+    content: '';
+    display: block;
+    width: 50%; 
+    height: .5rem;
+    background: #000000; 
+    margin: .5rem auto; 
+    border-radius: 1rem; 
+    transition: transform 0.3s ease; 
+}
+
+.texto-p:hover h2::after {
+    transform: scaleX(.5); 
+}
+.texto-p:hover h2::before {
+    transform: scaleX(.5); 
+}
 
 /**footer*/
 footer {
@@ -515,6 +714,7 @@ footer {
 .btn-wsp:hover .text-whats {
     display: block;
 }
+
 @media (max-width: 768px) {
     /**Containers*/
     .container-nav-cartlog{
@@ -568,7 +768,7 @@ footer {
         width: 100%;
         height: 100%;
         background: #000000cc; 
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(1rem);
         padding: 1rem;
         z-index: 1000;
         overflow-y: auto;

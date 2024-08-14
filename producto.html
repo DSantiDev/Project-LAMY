@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINTLAMI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- NormalizeCCS -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/producto/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+    <body> 
+        <div id="loading-screen">
+            <div class="spinner"></div>
+        </div>
+        <input type="checkbox" id="close-notice-checkbox" class="close-checkbox">
+        <header class="header">
+            <div class="container logo-navbar">
+                <div class="container-logo">
+                    <a href="index.html"><img class="logo" src="./images/logo.png" alt="imagen-logo" /></a>
+                </div>
+                <div class="btn-cart1" id="btn-cart1">
+                    <button type="button" class="btn btn-success" title="Ver su cesta de la compra">
+                        <a class="cart-icon" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                        </svg>
+                        </a>
+                        <p class="cart-number">0</p>
+                    </button>   
+                </div>
+                <label for="btnh-toggle" class="btn-hamburguer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                </label>
+                <input type="checkbox" id="btnh-toggle" class="btnh-toggle">
+                <div class="container-nav-cartlog">
+                    <label for="btnh-toggle" class="btnh-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                        </svg>
+                    </label>
+                    <nav class="nav" id="nav">
+                        <ul class="main-menu" >
+                            <li class="menu-item" >
+                                <strong><a class="header-item" href="./servicios.html" >Servicios</a></strong>
+                            </li>
+                            <li class="menu-item">
+                                <strong><a class="header-item" href="./computadores.html" >Computadores</a></strong>
+                            </li>
+                            <li class="menu-item">
+                                <strong><a class="header-item" href="./impresoras.html" >Impresoras</a></strong>
+                            </li>
+                            <li class="menu-item">
+                                <strong><a class="header-item" href="./tintas.html" >Tintas</a></strong>
+                            </li>
+                            <li class="menu-item">
+                                <strong><a class="header-item" href="./toners.html" >Toners</a></strong>
+                            </li>
+                            <li class="menu-item">
+                                <strong><a class="header-item" href="./accesorios.html" >Accesorios</a></strong>
+                            </li>
+                        </ul>              
+                    </nav>
+                    <div class="container-cartlog">
+                        <div class="container-search">
+                            <input class="search" type="text" id="search-input" placeholder="Buscar productos">
+                            <div class="btn-search" id="search-button">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div> 
+                        <div class="btn-cart">
+                            <button type="button" class="btn btn-success" title="Ver su cesta de la compra">
+                                <a class="cart-icon" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                </svg>
+                                </a>
+                                <p class="cart-number">0</p>
+                            </button>   
+                        </div>
+                        <div class="login">
+                            <label for="login-toggle" class="btn-login">Iniciar sesión</label>
+                            <input type="checkbox" id="login-toggle" class="login-toggle">
+                            <strong><a class="btn-register" href="#">Registrarse</a></strong>
+                            <div class="container-log">
+                                <div class="log-content">
+                                    <label for="login-toggle" class="btn-close">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                                        </svg>
+                                    </label>
+                                    <form id="login-form" action="#">
+                                        <label for="username"><strong>Correo electrónico:</strong></label>
+                                        <input class="text-log" type="text" id="username" name="username" >
+                                        <div id="username-warning" class="warning-message">Este campo es obligatorio</div>
+                                        <div id="email-format-warning" class="warning-message">Formato de correo electrónico no válido</div>
+                                        <label for="password"><strong>Contraseña:</strong></label>
+                                        <div class="password-wrapper">
+                                            <input class="text-log" type="password" id="password" name="password" >
+                                            <span class="toggle-password">
+                                                <i class="fa fa-eye" id="eye-icon"></i>
+                                            </span>
+                                        </div>
+                                        <div id="password-warning" class="warning-message">Este campo es obligatorio</div>
+                                        <button class="btn-log" type="submit">Entrar</button>
+                                        <a class="log-forget" href="#">¿Olvidaste tu contraseña?</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                </div> 
+                                   
+            </div>
+        </header>
+        <main class="main">
+            <nav class="breadcrumb">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./computadores.html">Computadores</a></li>
+                    <li><a href="./portatiles.html">Portatiles</a></li>
+                    <li><a href="./portatiles.html">Producto</a></li>
+                </ul>
+            </nav>
+            <div class="texto-p">
+                <h2>Producto</h2>
+            </div>
+            <div class="product-container">
+                <div class="product-gallery">
+                    <img src="./images/portatil-a.png" alt="Imagen principal" class="main-image">
+                    <div class="thumbnail-gallery">
+                        <img src="./images/portatil-a.png" alt="Miniatura 1" class="thumbnail">
+                        <img src="./images/portatil l.png" alt="Miniatura 1" class="thumbnail">
+                        <img src="./images/portatil-g.png" alt="Miniatura 2" class="thumbnail">
+                        <img src="./images/computador-t.png" alt="Miniatura 3" class="thumbnail">
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h1>Portátil Lenovo</h1>
+                    <p class="product-price">$1'070.000</p>  
+                    <p class="cantidad">Cantidad</p>
+                    <div class="quantity-container">
+                        <button class="quantity-button decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="quantity-button increase">+</button>
+                    </div> 
+                    <div class="product-actions">
+                        <button class="btn-primary">Añadir al carrito</button>
+                        <button class="btn-secondary">Comprar ahora</button>
+                    </div>
+                </div>
+            </div>
+            
+                <div class="buttons-products">
+                    <input type="radio" name="product-tabs" id="description-toggle" class="description-toggle">
+                    <label for="description-toggle" class="tab ">Descripción</label>
+                    <input type="radio" name="product-tabs" id="valoracion-toggle" class="valoracion-toggle">
+                    <label for="valoracion-toggle" class="tab ">Valoraciones (0)</label>
+                    <input type="radio" name="product-tabs" id="especificaciones-toggle" class="especificaciones-toggle">
+                    <label for="especificaciones-toggle" class="tab">Especificaciones</label>
+                </div>
+                
+                
+            <div class="product-tabs">
+                <div class="buttons-products">
+                    <div class="btn-description">
+                        <input type="radio" name="product-tabs" id="description-toggle" class="description-toggle">
+                        <label for="description-toggle" class="tab ">Descripción</label>
+                        <div class="tab-panel-des">
+                            <h2>Descripción del producto</h2>
+                            <p class="description-pro">Portátil Lenovo con Pantalla De 14 Pulgadas, procesador Celeron N4020, con 4GB RAM y con almacenamiento de 1TB  para que no te quedes corto de espacio. Ideal para trabajo básico y para las tareas de la escuela o universidad. Llévatelo aun excelente precio y con la tranquilidad de 12 meses de garantía. Encuentra las mejores ofertas en  portátiles y computadores aquí en LAMY.</p>
+                        </div>
+                    </div>
+                    <div class="btn-valoracion">
+                        <input type="radio" name="product-tabs" id="valoracion-toggle" class="valoracion-toggle">
+                        <label for="valoracion-toggle" class="tab ">Valoraciones (0)</label>
+                        <div class="tab-panel-val">
+                            <div class="rating-section">
+                                <h3>Valoraciones</h3>
+                            
+                                <div class="rating-summary">
+                                    <div class="average-rating">
+                                        <span class="rating-number" id="average-rating">0.0</span>
+                                        <span class="rating-stars" id="average-stars">
+                                            ★★★★★
+                                        </span>
+                                        <span class="rating-count" id="rating-count">Basado en 0 valoraciones</span>
+                                    </div>
+                            
+                                    <div class="rating-distribution">
+                                        <div class="rating-bar">
+                                            <span>5 estrellas</span>
+                                            <div class="bar">
+                                                <div class="filled" id="rating-5" style="width: 0%;"></div>
+                                            </div>
+                                            <span class="percentage" id="rating-5-percentage">0%</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>4 estrellas</span>
+                                            <div class="bar">
+                                                <div class="filled" id="rating-4" style="width: 0%;"></div>
+                                            </div>
+                                            <span class="percentage" id="rating-4-percentage">0%</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>3 estrellas</span>
+                                            <div class="bar">
+                                                <div class="filled" id="rating-3" style="width: 0%;"></div>
+                                            </div>
+                                            <span class="percentage" id="rating-3-percentage">0%</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>2 estrellas</span>
+                                            <div class="bar">
+                                                <div class="filled" id="rating-2" style="width: 0%;"></div>
+                                            </div>
+                                            <span class="percentage" id="rating-2-percentage">0%</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>1 estrella</span>
+                                            <div class="bar">
+                                                <div class="filled" id="rating-1" style="width: 0%;"></div>
+                                            </div>
+                                            <span class="percentage" id="rating-1-percentage">0%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="reviews" id="reviews">
+                                    <h4>Comentarios recientes</h4>
+                                </div>
+                            
+                                <div class="submit-review">
+                                    <h4>Deja tu valoración</h4>
+                                    <select id="rating" aria-label="Rating">
+                                        <option value="5">★★★★★</option>
+                                        <option value="4">★★★★☆</option>
+                                        <option value="3">★★★☆☆</option>
+                                        <option value="2">★★☆☆☆</option>
+                                        <option value="1">★☆☆☆☆</option>
+                                    </select>
+                                    <textarea id="review-text" placeholder="Escribe tu comentario aquí..."></textarea>
+                                    <button class="submit-button" onclick="submitReview()">Enviar valoración</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="btn-especificaciones">
+                        <input type="radio" name="product-tabs" id="especificaciones-toggle" class="especificaciones-toggle">
+                        <label for="especificaciones-toggle" class="tab">Especificaciones</label>
+                        <div class="tab-panel-esp">
+                            <h2>Especificaciones</h2>
+                            <table class="des-esp">
+                                <tbody>
+                                    <tr class="table-esp">
+                                        <th class="product-attributes-item-label">Color</th>
+                                        <td class="product-attributes-item-value">Negro</td>
+                                    </tr>
+                                    <tr class="table-esp">
+                                        <th class="product-attributes-item-label">Dimensiones</th>
+                                        <td class="product-attributes-item-value">35 x 24 x 2 cm</td>
+                                    </tr>
+                                    <tr class="table-esp">
+                                        <th class="product-attributes-item-label">Material</th>
+                                        <td class="product-attributes-item-value">Aluminio</td>
+                                    </tr>
+                                    <tr class="table-esp">
+                                        <th class="product-attributes-item-label">Material</th>
+                                        <td class="product-attributes-item-value">Aluminio</td>
+                                    </tr>
+                                    <tr class="table-esp">
+                                        <th class="product-attributes-item-label">Material</th>
+                                        <td class="product-attributes-item-value">Aluminio</td>
+                                    </tr>
+                                    <tr class="table-esp">
+                                        <th class="product-attributes-item-label">Material</th>
+                                        <td class="product-attributes-item-value">Aluminio</td>
+                                    </tr>
+                                    <tr class="table-esp">
+                                        <th class="product-attributes-item-label">Material</th>
+                                        <td class="product-attributes-item-value">Aluminio</td>
+                                    </tr>
+                                    <tr class="table-esp">
+                                        <th class="product-attributes-item-label">Material</th>
+                                        <td class="product-attributes-item-value">Aluminio</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="same-products">
+                <div class="texto-p">
+                    <h2>Productos relacionados</h2>
+                </div>
+                <div class="cards-same-products">
+                    <div class="card">
+                        <div class="card-img-container">
+                            <img src="./images/portatil-a.png" alt="portatil-1" class="card-img">
+                            <div class="card-icons">
+                                <a href="producto.html">
+                                <i class="fas fa-search"></i>
+                                </a>
+                                <a href="producto.html">
+                                <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Producto 1</h3>
+                            <p class="card-text">Descripcion producto.</p>
+                            <div class="prices">
+                                <p class="card-price">$1'000.000</p>
+                            </div>
+                            <div class="btn-buy">
+                                <a href="./producto.html" class="card-button">Comprar</a>
+                            </div>                       
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-container">
+                            <img src="./images/portatil-a.png" alt="portatil-1" class="card-img">
+                            <div class="card-icons">
+                                <a href="producto.html">
+                                <i class="fas fa-search"></i>
+                                </a>
+                                <a href="producto.html">
+                                <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Producto 2</h3>
+                            <p class="card-text">Descripcion producto.</p>
+                            <div class="prices">
+                                <p class="card-price">$1'000.000</p>
+                            </div>
+                            <div class="btn-buy">
+                                <a href="./producto.html" class="card-button">Comprar</a>
+                            </div>                       
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-container">
+                            <img src="./images/portatil-a.png" alt="portatil-1" class="card-img">
+                            <div class="card-icons">
+                                <a href="producto.html">
+                                <i class="fas fa-search"></i>
+                                </a>
+                                <a href="producto.html">
+                                <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Producto 3</h3>
+                            <p class="card-text">Descripcion producto.</p>
+                            <div class="prices">
+                                <p class="card-price">$1'000.000</p>
+                            </div>
+                            <div class="btn-buy">
+                                <a href="./producto.html" class="card-button">Comprar</a>
+                            </div>                       
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-container">
+                            <img src="./images/portatil-a.png" alt="portatil-1" class="card-img">
+                            <div class="card-icons">
+                                <a href="producto.html">
+                                <i class="fas fa-search"></i>
+                                </a>
+                                <a href="producto.html">
+                                <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Producto 4</h3>
+                            <p class="card-text">Descripcion producto.</p>
+                            <div class="prices">
+                                <p class="card-price">$1'000.000</p>
+                            </div>
+                            <div class="btn-buy">
+                                <a href="./producto.html" class="card-button">Comprar</a>
+                            </div>                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container container-footer">
+                <div class="terms">
+                    <p>Copyright © 2024 Cintas & Cartuchos LAMY. Todos los derechos reservados </p>
+                </div>
+                <div>
+                    <a class="terms-link" href="#">Términos y condiciones</a>
+                    <a class="terms-link" href="#">Política de privacidad</a>
+                    <a class="terms-link" href="#">Política de Envíos</a>
+                    <a class="terms-link" href="#">PQR’S</a>
+                </div >
+                <div class="whatsapp">
+                <a href="https://api.whatsapp.com/send/?phone=573002564183&text=Hola+Lamy%2C+estoy+interesado+en+cotizar&type=phone_number&app_absent=0" class="btn-wsp" target="_blank">
+                    <img class="logo-whatsapp" src="./images/whatsapp.png" alt="logo-whatsapp">
+                    <p class="text-whats ">¿Necesitas algo? Escríbenos</p>                
+                </a>
+                </div>  
+            </div>
+        </footer>
+        <script src="./js/producto/scripts.js"></script>
+        <script src="./js/scripts.js"></script>
+    </body>
+</html>
